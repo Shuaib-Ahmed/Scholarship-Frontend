@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #d2bba0;
+  --secondary-color: #332e2e;
+  --tertiary-color: #9f7e69;
+  --primary-transition: all 0.2s ease-in-out;
+}
+html {
+  font-size: 10px;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-size: 1.75rem;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 3.5rem;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--primary-transition);
+
+  display: flex;
+  align-items: center;
+}
+button svg {
+  margin-right: 1rem;
+}
+
+/* main container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* form container */
+.formContainer {
+  width: 50%;
+  margin: 4rem auto;
+  box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.5);
+  padding: 3rem 2rem;
+  color: var(--secondary-color);
+}
+.formContainer div {
+  display: flex;
+  flex-direction: column;
+}
+.formContainer div label {
+  font-size: 2rem;
+  color: var(--tertiary-color);
+}
+.formContainer div input,
+.formContainer div select,
+.formContainer div textarea {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid var(--secondary-color);
+}
+.formContainer div textarea {
+  height: 200px;
+}
+.formContainer div input[type="file"] {
+  border: none;
+}
+.formContainer button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* table */
+.tableContainer {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.tableContainer table {
+  color: var(--secondary-color);
+  width: 100%;
+  font-size: 2rem;
+}
+.tableContainer table th {
+  text-align: left;
+}
+.tableContainer table th,
+.tableContainer table td {
+  padding: 2rem 1rem;
+}
+.tableContainer table td a {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+}
+.tableContainer table td a svg {
+  margin-right: 1rem;
+}
+
+/* buttons */
+.primaryBtn {
+  background: var(--secondary-color);
+}
+.primaryBtn:hover {
+  background: var(--tertiary-color);
+}
+
+.secondaryBtn {
+  background: var(--tertiary-color);
+}
+.secondaryBtn:hover {
+  background: var(--secondary-color);
+}
+
+/* page title */
+.sectionTitle {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+.sectionTitle svg {
+  font-size: 4rem;
+  color: var(--tertiary-color);
+  margin-right: 1rem;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+  .formContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+  .container{
+    width: 95%;
+  }
+  .formContainer {
+    width: 90%;
+  }
+}

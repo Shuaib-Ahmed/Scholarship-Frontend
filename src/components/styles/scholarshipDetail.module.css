@@ -1,0 +1,79 @@
+.detailContainer {
+  display: flex;
+  margin: 8rem auto;
+}
+
+/* left */
+.detailContainer .left {
+  width: 50%;
+  color: var(--secondary-color);
+}
+.detailContainer .left h4 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+.detailContainer .left p {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.detailContainer h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+.detailContainer h5 svg {
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+/* right */
+.detailContainer .right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.detailContainer .right img {
+  width: 80%;
+  border: 0.2rem solid var(--primary-color);
+}
+.detailContainer .right div {
+  width: 80%;
+  position: absolute;
+  height: 100%;
+  background: var(--secondary-color);
+  z-index: -10;
+  right: -2rem;
+  bottom: -2rem;
+}
+
+@media (max-width: 900px) {
+  .detailContainer {
+    flex-direction: column;
+    margin: 5rem auto;
+  }
+
+  .detailContainer .left {
+    width: 100%;
+  }
+
+  .detailContainer .right {
+    width: 70%;
+    margin: 3rem auto;
+  }
+  .detailContainer .right img,
+  .detailContainer .right div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .detailContainer .right {
+    width: 90%;
+  }
+
+  .detailContainer .right div {
+    right: -1rem;
+    bottom: -1rem;
+  }
+}

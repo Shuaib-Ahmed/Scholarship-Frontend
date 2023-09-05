@@ -1,0 +1,36 @@
+.filterContainer h3 {
+  font-size: 2.5rem;
+  color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
+}
+
+.filterContainer form {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+.filterContainer form div label {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.filterContainer form div select,
+.filterContainer form div input {
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0 2rem;
+  border: 0.2rem solid var(--secondary-color);
+}
+
+@media (max-width: 750px) {
+  .filterContainer form {
+    margin: 2rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filterContainer form div,
+  .filterContainer form button {
+    margin: 1rem 0;
+  }
+}

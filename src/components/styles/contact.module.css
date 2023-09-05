@@ -1,0 +1,85 @@
+.contactContainer {
+  display: flex;
+  margin: 8rem auto;
+}
+
+/* left */
+.contactContainer .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactContainer .left div {
+  display: flex;
+  flex-direction: column;
+}
+.contactContainer .left div label {
+  font-size: 2rem;
+  color: var(--tertiary-color);
+}
+.contactContainer .left div input,
+.contactContainer .left div textarea {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0;
+  border: 0.2rem solid var(--secondary-color);
+}
+.contactContainer .left div textarea {
+  height: 10rem;
+}
+.contactContainer .left button {
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+
+/* right */
+.contactContainer .right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.contactContainer .right img {
+  width: 80%;
+}
+.contactContainer .right div {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: var(--secondary-color);
+  z-index: -10;
+  right: -2rem;
+  bottom: -2rem;
+}
+
+@media (max-width: 900px) {
+  .contactContainer {
+    flex-direction: column;
+    margin: 5rem auto;
+  }
+
+  .contactContainer .left {
+    width: 100%;
+  }
+
+  .contactContainer .right {
+    width: 70%;
+    margin: 3rem auto;
+  }
+  .contactContainer .right img,
+  .contactContainer .right div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .contactContainer .right {
+    width: 90%;
+  }
+
+  .contactContainer .right div {
+    right: -1rem;
+    bottom: -1rem;
+  }
+}

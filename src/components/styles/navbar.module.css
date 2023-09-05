@@ -1,0 +1,121 @@
+.navContainer {
+  background: var(--primary-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.navContainer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* logo */
+.navContainer nav .navLogo {
+  flex: 1;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.navContainer nav .navLogo svg {
+  font-size: 3.5rem;
+  margin-right: 0.5rem;
+  color: var(--tertiary-color);
+}
+.navContainer nav .navLogo a {
+  color: var(--secondary-color);
+}
+
+/* nav links */
+.navContainer nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 4;
+}
+.navContainer nav ul li {
+  font-size: 1.75rem;
+  margin-left: 2.5rem;
+}
+.navContainer nav ul li a {
+  transition: var(--primary-transition);
+  color: var(--secondary-color);
+}
+.navContainer nav ul li a:hover {
+  color: white;
+}
+
+/* nav buttons */
+.navContainer nav ul li button {
+  background: var(--tertiary-color);
+  color: white;
+}
+.navContainer nav ul li:last-child button {
+  background: var(--secondary-color);
+}
+.navContainer nav ul li button:hover {
+  background: white;
+  color: var(--secondary-color);
+}
+
+/* open nav button */
+.navContainer nav .openBtn {
+  display: none;
+}
+
+/* close nav button */
+.navContainer nav ul .closeBtn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navContainer nav .openBtn {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 3.5rem;
+    cursor: pointer;
+  }
+
+  .navContainer nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background: rgb(201, 197, 197);
+    width: 100vw;
+    height: 100vh;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    transition: var(--primary-transition);
+  }
+  .navContainer nav ul .closeBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .navContainer nav ul .closeBtn svg{
+    margin-right: 1rem;
+  }
+  .navContainer nav ul li {
+    font-size: 2.5rem;
+    margin: 2rem;
+  }
+  .navContainer nav ul li button {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+  }
+
+  .openNav{
+    transform: translateX(0%);
+  }
+  .closeNav{
+    transform: translateX(-100%);
+  }
+}

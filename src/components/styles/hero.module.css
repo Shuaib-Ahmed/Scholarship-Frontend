@@ -1,0 +1,86 @@
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem auto;
+}
+
+/* left */
+.heroContainer .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heroContainer .left h2 {
+  font-size: 5rem;
+  color: var(--secondary-color);
+}
+.heroContainer .left h2 span {
+  color: var(--tertiary-color);
+}
+.heroContainer .left p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+.heroContainer .left button {
+  margin-top: 2rem;
+  align-self: flex-start;
+}
+
+/* right */
+.heroContainer .right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.heroContainer .right img {
+  width: 80%;
+}
+.heroContainer .right div {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: var(--primary-color);
+  z-index: -10;
+  right: -2rem;
+  bottom: -2rem;
+}
+
+@media (max-width: 900px) {
+  .heroContainer {
+    flex-direction: column;
+    margin: 5rem auto;
+  }
+
+  .heroContainer .left {
+    width: 100%;
+  }
+
+  .heroContainer .right {
+    width: 70%;
+    margin: 3rem auto;
+  }
+  .heroContainer .right img,
+  .heroContainer .right div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .heroContainer .left h2 {
+    font-size: 4rem;
+  }
+  .heroContainer .left p{
+    font-size: 1.75rem;
+  }
+
+  .heroContainer .right {
+    width: 90%;
+  }
+
+  .heroContainer .right div {
+    right: -1rem;
+    bottom: -1rem;
+  }
+}
